@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var personCount: Int = 1
-    @State var showLogo: Bool = true
+    @ObservedObject var myClass = MyClass()
     var body: some View {
         VStack {
             MyView()
@@ -22,8 +22,8 @@ struct ContentView: View {
                 personCount = (personCount == 1) ? 1 : personCount - 1
             }
             
-            if showLogo {
-                LittleLemonLogo(bindingVariable: $showLogo)
+            if myClass.showLogo {
+                LittleLemonLogo(myClass: myClass)
             }
             
         }
@@ -31,15 +31,20 @@ struct ContentView: View {
     }
 }
 
+//this block of code functions similar to an interface in Java/ objected oriented programming
+class MyClass:ObservableObject {
+    @Published var showLogo = true
+}
+ 
 struct LittleLemonLogo: View {
-    @Binding var bindingVariable: Bool
-    var body: some View{
+    var myClass: MyClass
+    var body: some View {
         VStack{
             Image("LittleLemonLogo")
             Button(action: {
-                bindingVariable.toggle()
+                myClass.showLogo.toggle()
             }, label: {
-                Text("Toggle Logo Visibility").font(.title2)
+                Text("Toggle Logo Visibility Off").font(.title2)
             })
         }
     }

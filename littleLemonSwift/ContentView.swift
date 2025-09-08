@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var inputValue: String = ""
+    @State var inputValue: String = "" //control variable
     var body: some View {
         VStack{
             //simple Text element to display some text
@@ -44,14 +44,7 @@ struct ContentView: View {
                 .foregroundColor(.gray)
                 .padding([.leading, .trailing],20) //spacing value
                 .background(Color.black)
-            
-            //other forms of padding
-            Text("Little Lemon Restaurant")
-                .font(.title)
-                .foregroundColor(.gray)
-                .padding([.top, .bottom],20) //spacing value
-                .background(Color.black)
-            
+         
             //other forms of padding
             Text("Little Lemon Restaurant")
                 .font(.title)
@@ -76,7 +69,21 @@ struct ContentView: View {
             
             
             
-            TextField("Type your name", text: $inputValue) //element that takes in an input //this
+            TextField("Type your name", text: $inputValue)
+                .onChange(of: inputValue) {
+                oldValue, newValue in print(newValue)}
+                .onSubmit({
+                    print("submitted")
+                }).padding()
+            //element that takes in an input //$inputValue is a control variable, primarily because any change to the textField is stored in inputValue
+            
+            //A Form allows you to group controls like Text, TextFields, DatePickers and others used for data entry.
+            
+            Label("Lightning", systemImage: "bolt.fill")
+
+            Form {
+                
+            }
         }
        
     }

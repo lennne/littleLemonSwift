@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CB0D48022E7067C80097937D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CB0D48012E7067BF0097937D /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CB3F2F3D2E64E95900F781FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB0D48012E7067BF0097937D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CB3F2F2F2E64E95500F781FD /* littleLemonSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleLemonSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3F2F3C2E64E95900F781FD /* littleLemonSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleLemonSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3F2F462E64E95900F781FD /* littleLemonSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleLemonSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		CB3F2F262E64E95500F781FD = {
 			isa = PBXGroup;
 			children = (
+				CB0D48012E7067BF0097937D /* .gitignore */,
 				CB3F2F312E64E95500F781FD /* littleLemonSwift */,
 				CB3F2F3F2E64E95900F781FD /* littleLemonSwiftTests */,
 				CB3F2F492E64E95900F781FD /* littleLemonSwiftUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0D48022E7067C80097937D /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var inputValue: String = "" //control variable
     var body: some View {
-        VStack{
-            //simple Text element to display some text
-            //styling the text element
-            ReservationForm()
-        }
-       
+
+                CombiningStacks()
     }
        
 }

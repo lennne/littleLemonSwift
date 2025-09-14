@@ -11,7 +11,7 @@ struct ContentView: View {
     @State var inputValue: String = "" //control variable
     var body: some View {
 
-                CombiningStacks()
+        TabViewPractice()
     }
        
 }

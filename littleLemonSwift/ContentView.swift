@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State var inputValue: String = "" //control variable
+    @ObservedObject private var model = Model()
     var body: some View {
 
-        TabViewPractice()
+        Gesture()
     }
        
 }

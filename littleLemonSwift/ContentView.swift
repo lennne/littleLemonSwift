@@ -12,7 +12,7 @@ struct ContentView: View {
     @ObservedObject private var model = Model()
     var body: some View {
 
-        GestureRecognizer()
+        MainView()
     }
        
 }
